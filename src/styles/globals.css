@@ -1,0 +1,175 @@
+/* Start MedicalDashboard */
+/* Cards */
+.card {
+  background-color: var(--bg-gray);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  width: 69vw; 
+  max-width: 1000px; 
+}
+/* Cards Modes */
+.light-mode .card {
+  background-color: #dbd8d8; 
+}
+
+.dark-mode .card {
+  background-color: #3a3a3a; 
+}
+/* Tables Quotes */
+.table-citas {
+  width: 100%;
+  border-collapse: collapse; 
+  margin-top: 1rem;
+}
+
+.table-citas th, .table-citas td {
+  padding: 1rem; 
+  text-align: center; 
+  border-bottom: 1px solid #e2e8f0; 
+}
+
+/* Tables Quotes Modes */
+.light-mode .table-citas th {
+  background-color: #e5e7eb; 
+}
+
+.dark-mode .table-citas th {
+  background-color: #374151; 
+}
+
+/* Tables Stats */
+.table-estadisticas {
+  width: 100%;
+  border-collapse: collapse; 
+  margin-top: 1rem;
+}
+
+.table-estadisticas th, .table-estadisticas td {
+  padding: 1rem; 
+  text-align: center; 
+  border-bottom: 1px solid var(--border-color); 
+}
+
+.table-estadisticas th {
+  background-color: var(--bg-secondary); 
+  font-weight: bold; 
+}
+
+/* Tables Stats Modes */
+.light-mode .table-estadisticas th {
+  background-color: #e5e7eb; 
+}
+
+.dark-mode .table-estadisticas th {
+  background-color: #374151; 
+}
+/* End MedicalDashboard */
+
+/* Light Mode */
+.light-mode {
+  --bg-primary: #f4f6f9;
+  --bg-secondary: #ffffff;
+  --text-primary: #2e384d;
+  --text-secondary: #6b7280;
+  --accent-color: #3b82f6;
+  --accent-color-hover: #2563eb;
+  --border-color: #e5e7eb;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --bg-primary: #1f2937;
+  --bg-secondary: #27303f;
+  --text-primary: #d1d5db;
+  --text-secondary: #9ca3af;
+  --accent-color: #60a5fa;
+  --accent-color-hover: #3b82f6;
+  --border-color: #374151;
+}
+
+/* Global Styles */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+}
+
+.header {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  position: fixed; 
+  top: 120; 
+  right: 0; 
+  width: 78%; 
+  color: wheat;
+}
+
+.toggle-mode {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--accent-color);
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-mode:hover {
+  background-color: var(--accent-color-hover);
+  color: #fff;
+}
+
+.sidebar {
+  background-color: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px; 
+}
+
+.content {
+  padding: 16px;
+  background-color: var(--bg-primary);
+  margin-left: 300px; 
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center; 
+}
+
+.nav-link {
+  padding: 12px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  text-align: center; 
+  width: 90%; 
+}
+
+.nav-link:hover {
+  background-color: var(--accent-color-hover);
+  color: #fff;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+h1 {
+  text-align: center;
+}
