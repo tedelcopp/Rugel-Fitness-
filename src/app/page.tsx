@@ -2,14 +2,18 @@ import "../styles/globals.css";
 
 export default function MedicalDashboard() {
   const citasHoy = [
-    { hora: "08:00 AM", paciente: "Juan Rodolfo Pérez", dni: "12345678" },
-    { hora: "09:30 AM", paciente: "Ana María García", dni: "87654321" },
+    { hora: "08:00 AM", paciente: "Juan Rodolfo Pérez", dni: "24582983" },
+    { hora: "09:30 AM", paciente: "Ana María García", dni: "38453926" },
+    { hora: "10:30 AM", paciente: "Pedro Oppenz", dni: "18583936" },
+    { hora: "11:00 AM", paciente: "Maria Laura Mendez", dni: "22453926" },
+    { hora: "11:45 AM", paciente: "Romina Furkich", dni: "28554831" },
+    { hora: "12:30 AM", paciente: "Roberto De Blam", dni: "28154976" },
   ];
 
   const estadisticas = {
-    totalCitas: 2,
-    pacientesAtendidos: 1,
-    citasPendientes: 1,
+    totalCitas: 6,
+    pacientesAtendidos: 2,
+    citasPendientes: 4,
   };
 
   return (
