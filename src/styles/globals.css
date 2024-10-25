@@ -1,4 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Start MedicalDashboard */
+.main-content {
+  flex-grow: 1;
+  padding: 16px;
+  background-color: var(--bg-primary);
+  margin-left: -300px; 
+  width: calc(100% + 300px); 
+}
+
 /* Cards */
 .card {
   background-color: var(--bg-gray);
@@ -6,65 +18,85 @@
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 16px;
-  width: 69vw; 
-  max-width: 1000px; 
+  width: 100%; 
 }
+
+.table-citas, .table-estadisticas {
+  width: 100%;
+}
+
 /* Cards Modes */
 .light-mode .card {
-  background-color: #dbd8d8; 
+  background-color: #dbd8d8;
 }
 
 .dark-mode .card {
-  background-color: #3a3a3a; 
+  background-color: #3a3a3a;
 }
+
 /* Tables Quotes */
 .table-citas {
   width: 100%;
-  border-collapse: collapse; 
+  border-collapse: collapse;
   margin-top: 1rem;
 }
 
 .table-citas th, .table-citas td {
-  padding: 1rem; 
-  text-align: center; 
-  border-bottom: 1px solid #e2e8f0; 
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 /* Tables Quotes Modes */
 .light-mode .table-citas th {
-  background-color: #e5e7eb; 
+  background-color: #e5e7eb;
 }
 
 .dark-mode .table-citas th {
-  background-color: #374151; 
+  background-color: #374151;
 }
 
 /* Tables Stats */
 .table-estadisticas {
   width: 100%;
-  border-collapse: collapse; 
+  border-collapse: collapse;
   margin-top: 1rem;
 }
 
 .table-estadisticas th, .table-estadisticas td {
-  padding: 1rem; 
-  text-align: center; 
-  border-bottom: 1px solid var(--border-color); 
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .table-estadisticas th {
-  background-color: var(--bg-secondary); 
-  font-weight: bold; 
+  background-color: var(--bg-secondary);
+  font-weight: bold;
 }
 
 /* Tables Stats Modes */
 .light-mode .table-estadisticas th {
-  background-color: #e5e7eb; 
+  background-color: #e5e7eb;
 }
 
 .dark-mode .table-estadisticas th {
-  background-color: #374151; 
+  background-color: #374151;
 }
+
+/* Start Recipes */
+#receta-content p {
+  text-decoration: underline;
+}
+.hidden-for-view {
+  display: none;
+}
+
+@media print {
+  .hidden-for-view {
+    display: block;
+  }
+}
+
 /* End MedicalDashboard */
 
 /* Light Mode */
@@ -96,20 +128,23 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   display: flex;
+  flex-direction: column;
   height: 100vh;
+  overflow-x: hidden; 
 }
 
 .header {
   background-color: var(--bg-secondary);
   border-radius: 8px;
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   align-items: center;
-  position: fixed; 
-  top: 120; 
-  right: 0; 
-  width: 78%; 
+  position: fixed;
+  top: 0; 
+  right: 0;
+  width: calc(100% - 300px); 
   color: wheat;
+  z-index: 1000; 
 }
 
 .toggle-mode {
@@ -134,20 +169,23 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 300px; 
+  width: 300px;
+  overflow-y: auto; 
+  z-index: 1000; 
 }
 
 .content {
   padding: 16px;
   background-color: var(--bg-primary);
   margin-left: 300px; 
+  flex-grow: 1; 
 }
 
 nav {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: center; 
+  align-items: center;
 }
 
 .nav-link {
@@ -156,18 +194,19 @@ nav {
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s ease;
-  text-align: center; 
-  width: 90%; 
+  text-align: center;
+  width: 90%;
 }
 
 .nav-link:hover {
   background-color: var(--accent-color-hover);
   color: #fff;
 }
+
 .logo {
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 h1 {
