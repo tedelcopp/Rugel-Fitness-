@@ -29,8 +29,7 @@ export default function Example() {
   return (
     <div className="relative isolate overflow-hidden py-24 sm:py-32 bg-white dark:bg-gray-900">
       {/* Componente Drawers */}
-      <Drawers open={open} onClose={() => setOpen(false)} content={content} />
-
+      <Drawers open={open} onCloseAction={() => setOpen(false)} content={content} />
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-5xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-7xl">Entrena conmigo</h2>
