@@ -1,12 +1,18 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { Dialog, DialogBackdrop, DialogPanel, DialogTitle, TransitionChild } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
+import { Dialog, DialogBackdrop, DialogPanel, DialogTitle, TransitionChild } from '@headlessui/react';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 
-export default function Drawers({ open, onClose, content }) {
+// Define la interfaz de las props
+interface DrawersProps {
+  open: boolean;             // Indica si el panel está abierto o cerrado
+  onCloseAction: () => void; // Cambié el nombre de onClose a onCloseAction
+  content: React.ReactNode;   // Contenido que se mostrará en el panel
+}
+
+export default function Drawers({ open, onCloseAction, content }: DrawersProps) {
   return (
-    <Dialog open={open} onClose={onClose} className="relative z-10">
+    <Dialog open={open} onClose={onCloseAction} className="relative z-10">
       <DialogBackdrop
         transition
         className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity duration-500 ease-in-out data-[closed]:opacity-0"
@@ -23,7 +29,7 @@ export default function Drawers({ open, onClose, content }) {
                 <div className="absolute left-0 top-0 -ml-8 flex pr-2 pt-4 duration-500 ease-in-out data-[closed]:opacity-0 sm:-ml-10 sm:pr-4">
                   <button
                     type="button"
-                    onClick={onClose}
+                    onClick={onCloseAction} // Usa onCloseAction aquí
                     className="relative rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
                   >
                     <span className="absolute -inset-2.5" />
@@ -45,5 +51,5 @@ export default function Drawers({ open, onClose, content }) {
         </div>
       </div>
     </Dialog>
-  )
+  );
 }
