@@ -21,8 +21,8 @@ const ImageGallery: React.FC = () => {
             <Image
               src={image.src}
               alt={image.alt}
-              layout="fill"
-              objectFit="cover"
+              fill // Esta propiedad permite que la imagen ocupe todo el contenedor
+              style={{ objectFit: 'cover' }} // Ajusta la imagen al contenedor
               className="transition-transform duration-300 transform hover:scale-105"
             />
           </div>

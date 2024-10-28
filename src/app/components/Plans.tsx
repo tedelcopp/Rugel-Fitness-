@@ -67,7 +67,7 @@ export default function Plans() {
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
   return (
-    <div className="relative isolate bg-gray-900 px-6 py-24 sm:py-32 lg:px-8 text-gray-300">
+    <div  id="plans" className="relative isolate bg-gray-900 px-6 py-24 sm:py-32 lg:px-8 text-gray-300">
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="text-base font-semibold leading-7 text-indigo-400">Planes</h2>
         <p className="mt-2 text-balance text-5xl font-semibold tracking-tight text-gray-100 sm:text-6xl">
