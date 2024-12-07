@@ -2,49 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+/* Asegurar que no haya desplazamiento horizontal */
+html, body {
+  scroll-behavior: smooth; /* Suavizar desplazamiento */
+  overflow-x: hidden; /* Desactiva el scroll horizontal */
+  margin: 0; /* Elimina márgenes que puedan causar problemas */
+  padding: 0; /* Elimina padding innecesario */
+  width: 100%; /* Limita el ancho al 100% de la pantalla */
+  max-width: 100%; /* Previene cualquier desbordamiento */
 }
 
-
-body {
-  @apply transition-colors duration-300 ease-in-out;
+/* Reset para todos los elementos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Manejo correcto del tamaño de elementos */
+  margin: 0; /* Sin márgenes adicionales */
+  padding: 0; /* Sin padding adicional */
 }
 
+/* Títulos */
 h2 {
   @apply text-2xl md:text-3xl font-bold text-center my-4;
 }
 
+/* Párrafos */
 p {
   @apply text-base md:text-lg my-2 text-center;
 }
 
+/* Contenedor principal */
 .container {
-.container {
-  @apply w-full mx-auto px-4; 
+  @apply w-full mx-auto px-4;
+  overflow-x: hidden; /* Asegura que no haya desplazamiento horizontal */
 }
 
 @media (max-width: 768px) {
   .container {
-    @apply w-full px-2; 
+    @apply w-full px-2;
+    margin: 0 auto;
+    max-width: 100%; /* Limita el ancho */
   }
 }
-}
 
+/* Cards */
 .card {
   @apply rounded-lg shadow-md p-6 transition-transform duration-200;
   @apply bg-cardBgLight dark:bg-cardBgDark;
   @apply text-textLight dark:text-textDark;
+  max-width: 100%; /* Asegura que no desborden horizontalmente */
+  overflow: hidden; /* Evita contenido desbordante */
 }
 
+/* Enlaces */
 a {
   @apply text-linkLight dark:text-linkDark no-underline;
 }
+
 a:hover {
   @apply text-blue-700 dark:text-blue-500;
 }
 
-/* Modo Responsive */
+/* Responsividad */
 @media (max-width: 768px) {
   h2 {
     @apply text-xl;
@@ -54,5 +73,6 @@ a:hover {
   }
   .card {
     @apply p-4;
+    max-width: 100%; /* Limita el ancho en pantallas pequeñas */
   }
 }

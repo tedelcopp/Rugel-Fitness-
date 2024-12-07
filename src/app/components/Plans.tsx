@@ -37,14 +37,7 @@ const tiers: Tier[] = [
     features: ["Productos ilimitados", "Suscriptores ilimitados", "Análisis avanzado"],
     featured: true,
   },
-  {
-    name: "Seguimiento Online",
-    id: "tier-premium",
-    priceMonthly: "$149",
-    description: "Todas las características con soporte personalizado.",
-    features: ["Productos ilimitados", "Suscriptores ilimitados", "Análisis avanzado"],
-    featured: false,
-  },
+
 ];
 
 function classNames(...classes: (string | undefined)[]): string {
