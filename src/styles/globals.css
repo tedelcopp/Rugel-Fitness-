@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* En src/styles/globals.css */
 html {
   scroll-behavior: smooth;
 }
@@ -22,13 +21,12 @@ p {
 
 .container {
 .container {
-  @apply w-full mx-auto px-4; /* Opción 1: 100% del ancho */
+  @apply w-full mx-auto px-4; 
 }
 
-/* Opción 2: Usar padding solo en pantallas grandes */
 @media (max-width: 768px) {
   .container {
-    @apply w-full px-2; /* Opción 2: Solo padding horizontal en pantallas pequeñas */
+    @apply w-full px-2; 
   }
 }
 }
