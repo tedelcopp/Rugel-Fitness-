@@ -1,18 +1,20 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: 'class', 
+  darkMode: 'class',
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        // Colores para la versión light
-        backgroundLight: '#325343', // Fondo principal
-        textLight: '#ffffff', // Texto en blanco
-        cardBgLight: '#D64C0C', // Fondo para tarjetas
-        linkLight: '#ffffff', // Links en blanco
+        // Light mode
+        backgroundLight: '#33684D', // Fondo principal en verde
+        textLight: '#E9EAE4', // Color de los textos en light mode
+        cardBgLight: '#D64D0C', // Fondo de las tarjetas en naranja
+        cardBgLightAlt: '#F28C5A', // Tono más claro del naranja para variantes
+        linkLight: '#E9EAE4', // Cambiar texto azul al color deseado
+        backgroundLightAlt: '#B5D3B0', // Verde más claro para secciones específicas
 
-        // Colores para la versión dark
+        // Dark mode (opcional, mantenemos los valores actuales)
         backgroundDark: '#111827',
         textDark: '#e5e7eb',
         cardBgDark: '#1f2937',
@@ -22,5 +24,4 @@ const config: Config = {
   },
   plugins: [],
 };
-
 export default config;

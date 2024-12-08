@@ -37,7 +37,6 @@ const tiers: Tier[] = [
     features: ["Productos ilimitados", "Suscriptores ilimitados", "Análisis avanzado"],
     featured: true,
   },
-
 ];
 
 function classNames(...classes: (string | undefined)[]): string {
@@ -48,16 +47,17 @@ export default function Plans() {
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
   return (
-    <div
-      id="plans"
-      className={`relative isolate -mt-10 px-6 py-16 sm:py-20 lg:px-8 
-      bg-backgroundLight text-textLight dark:bg-backgroundDark dark:text-textDark`}
-    >
+<div
+  id="plans"
+  className={classNames(
+    "relative isolate -mt-10 px-6 py-16 sm:py-20 lg:px-8 transition-colors duration-500",
+    "bg-[#4A966F] dark:bg-[#838683]"
+  )}
+>
       <div className="mx-auto max-w-7xl text-center">
-        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-7 text-linkLight dark:text-linkDark">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-7 text-linkLight dark:text-linkDark">
           Planes
         </h2>
-
         <p className="mt-2 text-balance text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
           Elegí el plan que más se adapte a vos
         </p>
@@ -72,25 +72,15 @@ export default function Plans() {
             className={classNames(
               "cursor-pointer transform transition-transform duration-300 ease-in-out",
               selectedPlan === tier.id
-                ? "scale-105 z-10 bg-cardBgLight text-textLight dark:bg-cardBgDark dark:text-textDark ring-2 ring-linkLight dark:ring-linkDark"
-                : "scale-100 bg-cardBgLight text-textLight dark:bg-cardBgDark dark:text-textDark",
+                ? "scale-105 z-10 ring-2 ring-linkLight dark:ring-linkDark"
+                : "scale-100",
               "relative p-6 rounded-lg shadow-lg hover:shadow-xl",
+              "bg-cardBgLight text-textLight dark:bg-cardBgDark dark:text-textDark",
               "w-full sm:w-72 lg:w-80 max-w-xs"
             )}
             onClick={() => setSelectedPlan(tier.id)}
           >
-            <h3
-              className={classNames(
-                "text-lg font-semibold",
-                selectedPlan === tier.id
-                  ? "text-linkLight dark:text-linkDark"
-                  : tier.featured
-                  ? "text-linkLight dark:text-linkDark"
-                  : "text-textLight dark:text-textDark"
-              )}
-            >
-              {tier.name}
-            </h3>
+            <h3 className="text-lg font-semibold">{tier.name}</h3>
             <p className="mt-2 flex items-baseline gap-x-2">
               <span className="text-4xl font-semibold">{tier.priceMonthly}</span>
               <span className="text-base">{selectedPlan === tier.id ? "" : "/mes"}</span>

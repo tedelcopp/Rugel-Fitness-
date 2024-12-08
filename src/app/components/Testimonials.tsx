@@ -1,49 +1,77 @@
 "use client";
 
-export default function Example() {
+const testimonials = [
+  {
+    name: "Leslie Alexander",
+    username: "@lesliealexander",
+    text: "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+  },
+  {
+    name: "Lindsay Walton",
+    username: "@lindsaywalton",
+    text: "Excepteur consectetur deserunt id incididunt veniam mollit officia sint qui aute duis sit cillum.",
+    image: "https://randomuser.me/api/portraits/women/45.jpg",
+  },
+  {
+    name: "Whitney Francis",
+    username: "@whitneyfrancis",
+    text: "Voluptas quos itaque ipsam in voluptatem est. Iste eos blanditiis repudiandae. Earum deserunt enim.",
+    image: "https://randomuser.me/api/portraits/women/46.jpg",
+  },
+  {
+    name: "Michael Foster",
+    username: "@michaelfoster",
+    text: "Anim sit consequat culpa commodo eu do nisi commodo ut aute aliqua. Laborum esse duis tempor.",
+    image: "https://randomuser.me/api/portraits/men/44.jpg",
+  },
+  {
+    name: "Courtney Henry",
+    username: "@courtneyhenry",
+    text: "Distinctio facere aliquam est qui atque sint molestias ad. Fuga consequuntur asperiores.",
+    image: "https://randomuser.me/api/portraits/women/47.jpg",
+  },
+  {
+    name: "Leonard Krasner",
+    username: "@leonardkrasner",
+    text: "Aliquid dolore praesentium ratione. Cumque ea officia repellendus laboriosam.",
+    image: "https://randomuser.me/api/portraits/men/45.jpg",
+  },
+];
+
+export default function Testimonials() {
   return (
     <section
-      className={`relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:px-8 
-      bg-backgroundLight text-textLight dark:bg-backgroundDark dark:text-textDark`}
+      className={`px-6 pt-8 pb-24 sm:pb-32 lg:px-8 bg-backgroundLight text-textLight dark:bg-backgroundDark dark:text-textDark`}
     >
-      <div
-        className={`absolute inset-0 -z-10 
-        bg-[radial-gradient(45rem_50rem_at_top,theme(colors.cardBgLight),theme(colors.backgroundLight))] 
-        opacity-90 dark:bg-[radial-gradient(45rem_50rem_at_top,theme(colors.cardBgDark),theme(colors.backgroundDark))]`}
-      />
-      <div
-        className={`absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] 
-        bg-cardBgLight shadow-xl shadow-orange-400/10 ring-1 ring-orange-300 
-        dark:bg-cardBgDark dark:shadow-indigo-600/10 dark:ring-indigo-50`}
-      />
-      <div className="mx-auto max-w-2xl lg:max-w-4xl">
-        <img
-          alt="Workcation logo"
-          src="https://tailwindui.com/plus/img/logos/workcation-logo-indigo-600.svg"
-          className="mx-auto h-12"
-        />
-        <figure className="mt-10">
-          <blockquote className="text-center text-xl/8 font-semibold sm:text-2xl/9">
-            <p>
-              “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias
-              molestiae. Numquam corrupti in laborum sed rerum et corporis.”
-            </p>
-          </blockquote>
-          <figcaption className="mt-10">
-            <img
-              alt="Judith Black"
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              className="mx-auto h-10 w-10 rounded-full"
-            />
-            <div className="mt-4 flex items-center justify-center space-x-3 text-base">
-              <div className="font-semibold">Judith Black</div>
-              <svg width={3} height={3} viewBox="0 0 2 2" aria-hidden="true" className="fill-current">
-                <circle r={1} cx={1} cy={1} />
-              </svg>
-              <div className="opacity-75">CEO of Workcation</div>
+      <div className="mx-auto max-w-4xl text-center">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-7 text-linkLight dark:text-linkDark">
+  Testimonios
+</h2>
+        <p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg font-medium sm:text-xl">
+        Elegí un plan accesible con las mejores características para atraer a tu audiencia y aumentar tus ventas.
+      </p>
+      </div>
+      <div className="mx-auto mt-8 max-w-7xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {testimonials.map((testimonial, index) => (
+          <div
+            key={index}
+            className="relative rounded-lg bg-cardBgLight p-6 shadow-lg dark:bg-cardBgDark"
+          >
+            <p className="text-lg italic">"{testimonial.text}"</p>
+            <div className="mt-6 flex items-center space-x-4">
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
+                className="h-12 w-12 rounded-full"
+              />
+              <div>
+                <div className="font-semibold">{testimonial.name}</div>
+                <div className="text-sm opacity-75">{testimonial.username}</div>
+              </div>
             </div>
-          </figcaption>
-        </figure>
+          </div>
+        ))}
       </div>
     </section>
   );

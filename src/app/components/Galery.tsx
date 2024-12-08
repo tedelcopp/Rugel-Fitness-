@@ -11,18 +11,35 @@ const images: ImageData[] = [
   { src: '/images/Entrenamiento3.png', alt: 'Descripción de la imagen 3' },
 ];
 
+// Función para combinar clases condicionalmente
+function classNames(...classes: (string | undefined)[]): string {
+  return classes.filter(Boolean).join(' ');
+}
+
 const ImageGallery: React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      <h2 className="text-2xl font-bold text-center mb-6">Galería de Imágenes</h2>
+    <div
+    className={classNames(
+      "relative isolate -mt-10 px-6 py-16 sm:py-20 lg:px-8 transition-colors duration-500",
+      "bg-[#4A966F] dark:bg-[#838683]"
+    )}
+    >
+      <div className="mx-auto max-w-4xl text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-7 text-linkLight dark:text-linkDark">
+          Galería
+        </h2>
+        <p className="mx-auto mt-6 max-w-2xl text-lg font-medium sm:text-xl mb-8 text-textLight dark:text-textDark">
+          Elegí un plan accesible con las mejores características para atraer a tu audiencia y aumentar tus ventas.
+        </p>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {images.map((image) => (
           <div key={image.src} className="relative h-64 overflow-hidden rounded-lg shadow-lg">
             <Image
               src={image.src}
               alt={image.alt}
-              fill // Esta propiedad permite que la imagen ocupe todo el contenedor
-              style={{ objectFit: 'cover' }} // Ajusta la imagen al contenedor
+              fill
+              style={{ objectFit: 'cover' }}
               className="transition-transform duration-300 transform hover:scale-105"
             />
           </div>

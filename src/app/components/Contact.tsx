@@ -7,7 +7,7 @@ export default function Contact() {
   const [agreed, setAgreed] = useState(false)
 
   return (
-    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div className="isolate bg-white px-6 py-16 sm:py-20 lg:px-8">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -20,11 +20,13 @@ export default function Contact() {
           className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
         />
       </div>
-      <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Contacto</h2>
-        <p className="mt-2 text-lg leading-8 text-gray-600">
-        ¿Querés hacer una consulta o conocer más sobre lo que ofrecemos? En Rugel Fitness, estamos a tu disposición para ayudarte a alcanzar tus metas. Contactanos y descubrí cómo podemos apoyarte en tu camino hacia una vida mas saludable.
-        </p>
+      <div className="mx-auto max-w-4xl text-center">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-7 text-linkLight dark:text-linkDark">
+  Contacto
+</h2>
+<p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg font-medium sm:text-xl">
+        Elegí un plan accesible con las mejores características para atraer a tu audiencia y aumentar tus ventas.
+      </p>
       </div>
       <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -113,10 +115,9 @@ export default function Contact() {
               </Switch>
             </div>
             <Label className="text-sm leading-6 text-gray-600">
-            
-Al seleccionar esta opción, aceptas nuestra{' '}
+              Al seleccionar esta opción, aceptas nuestra{' '}
               <a href="#" className="font-semibold text-indigo-600">
-              política de&nbsp;privacidad
+                política de privacidad
               </a>
               .
             </Label>
