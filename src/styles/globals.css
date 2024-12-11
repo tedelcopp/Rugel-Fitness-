@@ -6,7 +6,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   @apply transition-colors duration-300 ease-in-out;
 }
@@ -18,7 +17,6 @@ h2 {
 p {
   @apply text-base md:text-lg my-2 text-center;
 }
-
 .container {
 .container {
   @apply w-full mx-auto px-4; 

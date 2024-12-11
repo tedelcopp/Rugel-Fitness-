@@ -11,10 +11,10 @@ const config: Config = {
         textLight: '#E9EAE4', // Color de los textos en light mode
         cardBgLight: '#D64D0C', // Fondo de las tarjetas en naranja
         cardBgLightAlt: '#F28C5A', // Tono más claro del naranja para variantes
-        linkLight: '#E9EAE4', // Cambiar texto azul al color deseado
+        linkLight: '#D64D0C', // Cambiar texto azul al color deseado
         backgroundLightAlt: '#B5D3B0', // Verde más claro para secciones específicas
 
-        // Dark mode (opcional, mantenemos los valores actuales)
+        // Dark mode 
         backgroundDark: '#111827',
         textDark: '#e5e7eb',
         cardBgDark: '#1f2937',
@@ -24,4 +24,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;

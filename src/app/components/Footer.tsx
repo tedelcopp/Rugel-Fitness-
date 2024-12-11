@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 dark:bg-gray-800 text-gray-400 dark:text-gray-300 py-10 px-4">
+    <footer  className="relative isolate overflow-hidden py-20 sm:py-24 bg-backgroundLight text-textLight dark:bg-backgroundDark dark:text-textDark">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center mb-6 text-center space-y-4">
           <div className="flex items-center space-x-2">
@@ -13,7 +13,7 @@ const Footer = () => {
         
         <nav className="flex flex-wrap justify-center space-x-4 sm:space-x-10 mb-6">
           <a href="#about" className="hover:text-white text-sm sm:text-base">
-            Nosotros
+           Sobre Mi
           </a>
           <a href="#plans" className="hover:text-white text-sm sm:text-base">
             Planes de Entrenamiento
@@ -45,7 +45,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="text-center text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-8">
-          &copy; {new Date().getFullYear()} Rugel Fitness. Todos los derechos reservados.
+          &copy; {new Date().getFullYear()} | Rugel Fitness. Todos los derechos reservados.
         </p>
       </div>
     </footer>

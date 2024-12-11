@@ -7,7 +7,7 @@ export default function Contact() {
   const [agreed, setAgreed] = useState(false)
 
   return (
-    <div className="isolate bg-white px-6 py-16 sm:py-20 lg:px-8">
+    <div className="relative isolate overflow-hidden py-20 sm:py-24 bg-backgroundLight text-textLight dark:bg-backgroundDark dark:text-textDark">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -21,17 +21,17 @@ export default function Contact() {
         />
       </div>
       <div className="mx-auto max-w-4xl text-center">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-7 text-linkLight dark:text-linkDark">
-  Contacto
-</h2>
-<p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg font-medium sm:text-xl">
-        Elegí un plan accesible con las mejores características para atraer a tu audiencia y aumentar tus ventas.
-      </p>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-7 text-linkLight dark:text-textDark">
+          Contacto
+        </h2>
+        <p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg font-medium sm:text-xl">
+          Elegí un plan accesible con las mejores características para atraer a tu audiencia y aumentar tus ventas.
+        </p>
       </div>
       <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
-            <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-white text-xl">
               Nombre
             </label>
             <div className="mt-2.5">
@@ -45,7 +45,7 @@ export default function Contact() {
             </div>
           </div>
           <div>
-            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-white text-xl">
               Apellido
             </label>
             <div className="mt-2.5">
@@ -59,7 +59,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="email" className="block text-sm font-semibold leading-6 text-white text-xl">
               E-mail
             </label>
             <div className="mt-2.5">
@@ -73,8 +73,8 @@ export default function Contact() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-gray-900">
-              Número Telefónico 
+            <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-white text-xl">
+              Número Telefónico
             </label>
             <div className="mt-2.5">
               <input
@@ -87,7 +87,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="message" className="block text-sm font-semibold leading-6 text-white text-xl">
               Mensaje
             </label>
             <div className="mt-2.5">
@@ -105,7 +105,7 @@ export default function Contact() {
               <Switch
                 checked={agreed}
                 onChange={setAgreed}
-                className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 data-[checked]:bg-indigo-600"
+                className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D64D0C] data-[checked]:bg-[#D64D0C]"
               >
                 <span className="sr-only">Aceptar políticas</span>
                 <span
@@ -114,9 +114,9 @@ export default function Contact() {
                 />
               </Switch>
             </div>
-            <Label className="text-sm leading-6 text-gray-600">
+            <Label className="block text-sm font-semibold leading-6 text text-xl">
               Al seleccionar esta opción, aceptas nuestra{' '}
-              <a href="#" className="font-semibold text-indigo-600">
+              <a href="#" className="font-semibold text text-xl">
                 política de privacidad
               </a>
               .
@@ -126,7 +126,7 @@ export default function Contact() {
         <div className="mt-10">
           <button
             type="submit"
-            className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="block w-full rounded-md bg-[#D64D0C] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#d43c00] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D64D0C] text-xl"
           >
             Hablemos
           </button>
