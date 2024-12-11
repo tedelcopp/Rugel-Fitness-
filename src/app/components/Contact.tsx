@@ -31,7 +31,7 @@ export default function Contact() {
       <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
-            <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-white text-xl">
+            <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-[#F8F9FA] text-xl">
               Nombre
             </label>
             <div className="mt-2.5">
@@ -45,7 +45,7 @@ export default function Contact() {
             </div>
           </div>
           <div>
-            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-white text-xl">
+            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-[#F8F9FA] text-xl">
               Apellido
             </label>
             <div className="mt-2.5">
@@ -59,7 +59,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="email" className="block text-sm font-semibold leading-6 text-white text-xl">
+            <label htmlFor="email" className="block text-sm font-semibold leading-6 text-[#F8F9FA] text-xl">
               E-mail
             </label>
             <div className="mt-2.5">
@@ -73,7 +73,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-white text-xl">
+            <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-[#F8F9FA] text-xl">
               Número Telefónico
             </label>
             <div className="mt-2.5">
@@ -87,7 +87,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="message" className="block text-sm font-semibold leading-6 text-white text-xl">
+            <label htmlFor="message" className="block text-sm font-semibold leading-6 text-[#F8F9FA] text-xl">
               Mensaje
             </label>
             <div className="mt-2.5">
@@ -126,7 +126,7 @@ export default function Contact() {
         <div className="mt-10">
           <button
             type="submit"
-            className="block w-full rounded-md bg-[#D64D0C] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#d43c00] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D64D0C] text-xl"
+            className="block w-full rounded-md bg-[#D64D0C] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#6366F1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D64D0C] text-xl"
           >
             Hablemos
           </button>

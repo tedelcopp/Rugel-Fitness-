@@ -5,6 +5,9 @@ const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontSize: {
+        'xxl': '1.75rem',  // Puedes ajustar el valor según lo necesites
+      },
       colors: {
         // Light mode
         backgroundLight: '#33684D', // Fondo principal en verde
