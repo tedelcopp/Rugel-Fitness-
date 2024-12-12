@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 const testimonials = [
   {
     name: "Leslie Alexander",
@@ -40,20 +42,26 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const [visibleTestimonials, setVisibleTestimonials] = useState(3);
+
+  const loadMore = () => {
+    setVisibleTestimonials((prev) => prev + 3);
+  };
+
   return (
     <section
       className={`px-6 pt-8 pb-24 sm:pb-32 lg:px-8 bg-backgroundLight text-textLight dark:bg-backgroundDark dark:text-textDark`}
     >
       <div className="mx-auto max-w-4xl text-center">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-7 text-linkLight dark:text-linkDark">
-  Testimonios
-</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-7 text-linkLight dark:text-linkDark">
+          Testimonios
+        </h2>
         <p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg font-medium sm:text-xl">
-        Elegí un plan accesible con las mejores características para atraer a tu audiencia y aumentar tus ventas.
-      </p>
+          Elegí un plan accesible con las mejores características para atraer a tu audiencia y aumentar tus ventas.
+        </p>
       </div>
       <div className="mx-auto mt-8 max-w-7xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {testimonials.map((testimonial, index) => (
+        {testimonials.slice(0, visibleTestimonials).map((testimonial, index) => (
           <div
             key={index}
             className="relative rounded-lg bg-cardBgLight p-6 shadow-lg dark:bg-cardBgDark"
@@ -73,6 +81,16 @@ export default function Testimonials() {
           </div>
         ))}
       </div>
+      {visibleTestimonials < testimonials.length && (
+        <div className="mt-8 text-center">
+          <button
+            onClick={loadMore}
+            className="rounded-md bg-indigo-500 px-4 py-2 text-white hover:bg-indigo-600 dark:bg-indigo-600 dark:hover:bg-indigo-500"
+          >
+            Cargar más
+          </button>
+        </div>
+      )}
     </section>
   );
 }
