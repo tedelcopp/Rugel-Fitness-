@@ -78,7 +78,7 @@ export default function Hero() {
           <a
             key={item.name}
             href={item.href}
-            onClick={() => setMobileMenuOpen(false)} // Cierra el menú al hacer clic
+            onClick={() => setMobileMenuOpen(false)} 
             className="-mx-3 block rounded-lg px-3 py-2 text-lg font-bold leading-7 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
           >
             {item.name}
