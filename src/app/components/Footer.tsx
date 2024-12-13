@@ -4,7 +4,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center mb-4 text-center space-y-6">
           <div className="flex items-center space-x-2">
-          <span className="text-white text-xxl font-semibold underline decoration-[#D64D0C] decoration-4 decoration-offset-2">Rugel Fitness</span>
+          <span className="text-white text-xxl font-semibold underline decoration-[#D64D0C] decoration-4 decoration-offset-2"
+            style={{ textUnderlineOffset: '12px' }} >RUGEL FITNESS</span>
           </div>
           <p className="mt-2 text-sm sm:text-xl">
             Making the world a better place through constructing elegant hierarchies.

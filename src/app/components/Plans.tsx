@@ -55,13 +55,16 @@ export default function Plans() {
   )}
 >
       <div className="mx-auto max-w-7xl text-center">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-7 text-linkLight dark:text-linkDark font-compacta">
+      <h2
+  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-7 text-white dark:text-linkDark underline decoration-[#D64D0C] font-compacta"
+  style={{ textUnderlineOffset: '12px' }} 
+>
   Planes
 </h2>
 
-        <p className="mt-2 text-balance text-4xl text-white dark:text-prett font-semibold tracking-tight sm:text-5xl md:text-6xl">
-          Elegí el plan que más se adapte a vos
-        </p>
+<p className="mt-8 text-balance text-4xl text-white dark:text-prett font-semibold tracking-tight sm:text-5xl md:text-4.5xl">
+  Elegí el que más se adapte a vos!
+</p>
       </div>
       <p className="mx-auto mt-6 max-w-2xl text-white dark:text-pretty text-center text-lg font-medium sm:text-xl">
         Elegí un plan accesible con las mejores características para atraer a tu audiencia y aumentar tus ventas.
