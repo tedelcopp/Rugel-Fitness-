@@ -86,12 +86,12 @@ export default function Testimonials() {
       </div>
       {visibleTestimonials < testimonials.length && (
         <div className="mt-8 text-center">
-          <button
-            onClick={loadMore}
-            className="rounded-md bg-indigo-500 px-4 py-2 text-white hover:bg-indigo-600 dark:bg-indigo-600 dark:hover:bg-indigo-500"
-          >
-            Cargar más
-          </button>
+      <button
+  onClick={loadMore}
+  className="rounded-md bg-[#D64D0C] px-4 py-2 text-white transition-transform duration-300 hover:-translate-y-1 shadow-md"
+>
+  Ver más ➕
+</button>
         </div>
       )}
     </section>
