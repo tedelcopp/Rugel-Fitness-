@@ -14,10 +14,10 @@ export default function Newsletter() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">
-            <h2 className="text-4xl font-semibold tracking-tight text-gray-900 dark:text-white ">
+            <h2 className="text-4xl font-semibold tracking-tight text-white">
               Subscribite a nuestro NewsLetter
             </h2>
-            <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
+            <p className="mt-4 text-lg text-white">
               Mantenete al día con las últimas novedades, consejos y artículos exclusivos de nuestro equipo. Nuestra misión es brindarte contenido de valor para que sigas avanzando y descubriendo todo lo que tenemos para ofrecerte.
             </p>
             <div className="mt-6 flex max-w-md gap-x-4">
@@ -31,7 +31,7 @@ export default function Newsletter() {
                 required
                 placeholder="Ingresa tu correo electrónico.."
                 autoComplete="email"
-                className="min-w-0 flex-auto rounded-md border-0 bg-gray-100 dark:bg-gray-700 px-5 py-3 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-base sm:leading-6"
+                className="min-w-0 flex-auto rounded-md border-0 bg-gray-100 dark:bg-gray-700 px-5 py-3 text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-base sm:leading-6"
               />
               <button
                 type="submit"
@@ -50,8 +50,8 @@ export default function Newsletter() {
               <div className="rounded-md bg-[#6366F1] dark:bg-gray-700 p-2">
                 <CalendarDaysIcon aria-hidden="true" className="h-6 w-6 text-white dark:text-white" />
               </div>
-              <dt className="mt-4 font-semibold text-gray-900 dark:text-white text-xl">Artículos Mensuales</dt>
-              <dd className="mt-2 leading-7 text-gray-700 dark:text-gray-400">
+              <dt className="mt-4 font-semibold text-white text-xl">Artículos Mensuales</dt>
+              <dd className="mt-2 leading-7 text-white">
                 Recibi cada mes contenido exclusivo y detallado que cubre temas de actualidad, tendencias y consejos prácticos. Nos enfocamos en brindarte información de calidad que puedas aplicar en tu vida.
               </dd>
             </div>
@@ -59,8 +59,8 @@ export default function Newsletter() {
               <div className="rounded-md bg-[#6366F1] dark:bg-gray-700 p-2">
                 <HandRaisedIcon aria-hidden="true" className="h-6 w-6 text-white dark:text-white" />
               </div>
-              <dt className="mt-4 font-semibold text-gray-900 dark:text-white text-xl">Sin Spam</dt>
-              <dd className="mt-2 leading-7 text-gray-700 dark:text-gray-400">
+              <dt className="mt-4 font-semibold text-white text-xl">Sin Spam</dt>
+              <dd className="mt-2 leading-7 text-white">
                 Nos comprometemos a enviarte solo lo esencial, sin correos innecesarios, para que te mantengas informado sin spam.
               </dd>
             </div>

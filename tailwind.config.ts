@@ -6,7 +6,7 @@ const config: Config = {
   theme: {
     extend: {
       fontSize: {
-        'xxl': '1.75rem',  // Puedes ajustar el valor según lo necesites
+        'xxl': '1.75rem',  
       },
       
       textDecorationOffset: {
@@ -14,12 +14,12 @@ const config: Config = {
       },
       colors: {
         // Light mode
-        backgroundLight: '#33684D', // Fondo principal en verde
-        textLight: '#E9EAE4', // Color de los textos en light mode
-        cardBgLight: '#D64D0C', // Fondo de las tarjetas en naranja
-        cardBgLightAlt: '#F28C5A', // Tono más claro del naranja para variantes
-        linkLight: '#ECEDFD', // Cambiar texto azul al color deseado
-        backgroundLightAlt: '#B5D3B0', // Verde más claro para secciones específicas
+        backgroundLight: '#33684D', 
+        textLight: '#E9EAE4', 
+        cardBgLight: '#D64D0C', 
+        cardBgLightAlt: '#F28C5A', 
+        linkLight: '#ECEDFD', 
+        backgroundLightAlt: '#B5D3B0', 
 
         // Dark mode 
         backgroundDark: '#111827',

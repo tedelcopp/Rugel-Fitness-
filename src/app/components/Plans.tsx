@@ -59,11 +59,11 @@ export default function Plans() {
   Planes
 </h2>
 
-        <p className="mt-2 text-balance text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
+        <p className="mt-2 text-balance text-4xl text-white dark:text-prett font-semibold tracking-tight sm:text-5xl md:text-6xl">
           Elegí el plan que más se adapte a vos
         </p>
       </div>
-      <p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg font-medium sm:text-xl">
+      <p className="mx-auto mt-6 max-w-2xl text-white dark:text-pretty text-center text-lg font-medium sm:text-xl">
         Elegí un plan accesible con las mejores características para atraer a tu audiencia y aumentar tus ventas.
       </p>
       <div className="mx-auto mt-16 flex flex-wrap justify-center gap-6 md:gap-8">
