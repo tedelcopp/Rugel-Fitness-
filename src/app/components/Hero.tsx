@@ -39,7 +39,11 @@ export default function Hero() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-lg font-bold leading-6 text-gray-900 dark:text-gray-100 hover:underline hover:text-indigo-600" style={{ textUnderlineOffset: '8px' }}>
+              <a key={item.name} href={item.href} className="text-lg font-bold leading-6 text-gray-900 dark:text-gray-100 hover:underline hover:text-black"  style={{
+                textUnderlineOffset: '8px',
+                textDecorationThickness: '3px',
+                textDecorationColor: '#6366F1', 
+              }}>
                 {item.name}
               </a>
             ))}
@@ -115,13 +119,13 @@ export default function Hero() {
   <div className="mt-10 flex items-center justify-center gap-x-6">
     <a
       href="#"
-      className="rounded-md bg-indigo-600 px-6 py-3 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+      className="rounded-md bg-[#6366F1] px-6 py-3 text-lg font-semibold text-white shadow-sm hover:bg-[#7C7EF4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
     >
       Unite
     </a>
-    <a href="#" className="text-lg font-semibold leading-6 text-gray-900 dark:text-gray-100">
+    {/* <a href="#" className="text-lg font-semibold leading-6 text-gray-900 dark:text-gray-100">
       + Información <span aria-hidden="true">→</span>
-    </a>
+    </a> */}
   </div>
 </div>
       </div>
