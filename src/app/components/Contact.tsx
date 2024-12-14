@@ -7,7 +7,16 @@ export default function Contact() {
   const [agreed, setAgreed] = useState(false)
 
   return (
-    <div className="relative isolate overflow-hidden py-20 sm:py-24 bg-backgroundLight text-textLight dark:bg-backgroundDark dark:text-textDark">
+<div className="relative isolate overflow-hidden pt-10 sm:pt-12 pb-20 sm:pb-24 bg-backgroundLight text-textLight dark:bg-backgroundDark dark:text-textDark">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-cover bg-center"
+        style={{
+          backgroundImage: 'url("/images/Entrenamiento5.jpg")',
+          filter: 'blur(10px)', 
+          opacity: 0.7, 
+        }}
+      ></div>
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -20,13 +29,15 @@ export default function Contact() {
           className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
         />
       </div>
+
+      {/* Contenido del componente */}
       <div className="mx-auto max-w-4xl text-center">
-      <h2
-  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-7 text-white dark:text-linkDark underline decoration-[#D64D0C] font-compacta"
-  style={{ textUnderlineOffset: '12px' }} 
->
-  Contacto
-</h2>
+        <h2
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-7 text-white dark:text-linkDark underline decoration-[#D64D0C] font-compacta"
+          style={{ textUnderlineOffset: '12px' }}
+        >
+          Contacto
+        </h2>
         <p className="mx-auto mt-8 max-w-2xl text-pretty text-center text-lg font-medium sm:text-xl">
           Elegí un plan accesible con las mejores características para atraer a tu audiencia y aumentar tus ventas.
         </p>

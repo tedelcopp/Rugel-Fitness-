@@ -14,7 +14,12 @@ export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-white dark:bg-gray-900">
+    <div
+      className="bg-black dark:bg-gray-900 bg-cover bg-center bg-fixed"
+      style={{
+        backgroundImage: 'url("/images/Entrenamiento5.jpg")',
+      }}
+    >
       <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 ">
           <div className="flex lg:flex-1">
@@ -22,10 +27,9 @@ export default function Hero() {
               <span className="sr-only">Rugel Fitness</span>
               <img
   alt="Rugel Fitness Logo"
-  src="https://i.ibb.co/8sb2Sqw/Rugel-Fitness-removebg-preview.png"
-  className="h-10 lg:h-12 w-auto object-contain"
+  src="https://i.ibb.co/Q6t514K/Captura-de-pantalla-2024-12-14-084756-removebg-preview.png"
+  className="h-10 lg:h-16 w-auto object-contain"
 />
-
             </a>
           </div>
           <div className="flex lg:hidden">
