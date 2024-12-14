@@ -8,15 +8,15 @@ export default function Contact() {
 
   return (
 <div className="relative isolate overflow-hidden pt-10 sm:pt-12 pb-20 sm:pb-24 bg-backgroundLight text-textLight dark:bg-backgroundDark dark:text-textDark">
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-cover bg-center"
-        style={{
-          backgroundImage: 'url("/images/Entrenamiento5.jpg")',
-          filter: 'blur(10px)', 
-          opacity: 0.7, 
-        }}
-      ></div>
+<div
+    aria-hidden="true"
+    className="absolute inset-0 -z-10 bg-cover bg-center"
+    style={{
+      backgroundImage: 'url("/images/Entrenamiento5.jpg")',
+      filter: 'blur(10px)',
+      opacity: 0.7,
+    }}
+  ></div>
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
