@@ -21,10 +21,11 @@ export default function Hero() {
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Rugel Fitness</span>
               <img
-                alt=""
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto"
-              />
+  alt="Rugel Fitness Logo"
+  src="https://i.ibb.co/8sb2Sqw/Rugel-Fitness-removebg-preview.png"
+  className="h-10 lg:h-12 w-auto object-contain"
+/>
+
             </a>
           </div>
           <div className="flex lg:hidden">
