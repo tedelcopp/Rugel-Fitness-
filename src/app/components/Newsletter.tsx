@@ -55,7 +55,7 @@ export default function Newsletter() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Ingresa tu correo electrónico.."
+                placeholder="Ingresa tu email.."
                 autoComplete="email"
                 className="min-w-0 flex-auto rounded-md border-0 bg-gray-100 dark:bg-gray-700 px-5 py-3 text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-base sm:leading-6"
               />
