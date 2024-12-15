@@ -17,12 +17,12 @@ function classNames(...classes: (string | undefined)[]): string {
 
 const ImageGallery: React.FC = () => {
   return (
-    <div
-    className={classNames(
-      "relative isolate -mt-10 px-6 py-16 sm:py-20 lg:px-8 transition-colors duration-500",
-      "bg-[#4A966F] dark:bg-[#838683]"
-    )}
-    >
+<div
+  className={classNames(
+    "relative isolate -mt-12 px-6 pt-4 pb-16 sm:pt-6 sm:pb-20 lg:px-8 transition-colors duration-500",
+    "bg-[#4A966F] dark:bg-[#838683]"
+  )}
+>
       <div className="mx-auto max-w-4xl text-center">
       <h2
   className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-7 text-white dark:text-linkDark underline decoration-[#D64D0C] font-compacta"
