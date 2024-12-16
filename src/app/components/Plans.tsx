@@ -57,7 +57,7 @@ export default function Plans() {
       <div className="mx-auto max-w-7xl text-center">
       <h2
   className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-7 text-white dark:text-linkDark underline decoration-[#D64D0C] font-compacta"
-  style={{ textUnderlineOffset: '12px' }} 
+  style={{ textUnderlineOffset: '12px' }}  
 >
   Planes
 </h2>

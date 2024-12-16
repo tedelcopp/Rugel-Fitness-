@@ -3,108 +3,94 @@
 import { useState } from 'react';
 import Drawers from './Drawer';
 
-const links = [
-  { 
-    name: 'Personalizados', 
-    content: 'Información sobre entrenamientos personalizados.', 
+type Link = {
+  name: string;
+  content: string;
+  image: string;
+  details: string;
+  whatsappMessage: string;
+};
+
+const links: Link[] = [
+  {
+    name: 'Personalizados',
+    content: 'Información sobre entrenamientos personalizados.',
     image: '/images/Entrenamiento5.jpg',
-    details: 'Entrenamientos diseñados a medida para alcanzar tus metas específicas, sea ganar fuerza, bajar de peso o aumentar tu resistencia.'
+    details: 'Entrenamientos diseñados a medida para alcanzar tus metas específicas, sea ganar fuerza, bajar de peso o aumentar tu resistencia.',
+    whatsappMessage: '¡Hola! Estoy interesado en los entrenamientos personalizados.',
   },
-  { 
-    name: 'Planes de Entrenamiento', 
-    content: 'Descubre nuestros diversos planes de entrenamiento.', 
-    image: '/images/planes.jpg',
-    details: 'Nuestros planes incluyen rutinas variadas, adaptadas a diferentes niveles de experiencia, para garantizar el máximo progreso.'
+  {
+    name: 'Planes de Entrenamiento',
+    content: 'Descubre nuestros diversos planes de entrenamiento.',
+    image: '/images/Entrenamiento5.jpg',
+    details: 'Nuestros planes incluyen rutinas variadas, adaptadas a diferentes niveles de experiencia, para garantizar el máximo progreso.',
+    whatsappMessage: '¡Hola! Me gustaría conocer más sobre los planes de entrenamiento.',
   },
-  { 
-    name: 'Semi-Personalizados', 
-    content: 'Planes semi-personalizados para tus necesidades.', 
-    image: '/images/semi-personalizados.jpg',
-    details: 'Combinamos la flexibilidad de un plan general con ajustes específicos para ti, logrando un balance entre eficiencia y personalización.'
+  {
+    name: 'Semi-Personalizados',
+    content: 'Planes semi-personalizados para tus necesidades.',
+    image: '/images/Entrenamiento5.jpg',
+    details: 'Combinamos la flexibilidad de un plan general con ajustes específicos para ti, logrando un balance entre eficiencia y personalización.',
+    whatsappMessage: '¡Hola! Quiero saber más sobre los planes semi-personalizados.',
   },
-  { 
-    name: 'Seguimiento Online', 
-    content: 'Opciones para seguimiento online de tus progresos.', 
-    image: '/images/seguimiento.jpg',
-    details: 'Accede a herramientas de seguimiento y consultas con tu entrenador desde la comodidad de tu hogar.'
+  {
+    name: 'Seguimiento Online',
+    content: 'Opciones para seguimiento online de tus progresos.',
+    image: '/images/Entrenamiento5.jpg',
+    details: 'Accede a herramientas de seguimiento y consultas con tu entrenador desde la comodidad de tu hogar.',
+    whatsappMessage: '¡Hola! Estoy interesado en el seguimiento online.',
   },
 ];
-
-const stats = [
-  { name: 'Oficinas alrededor del mundo', value: '12' },
-  { name: 'Colegas de tiempo completo', value: '+ 300' },
-  { name: 'Horas por semana', value: '+ 40' },
-  { name: 'Días libres pagados', value: 'Ilimitados' },
-];
-
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [drawerContent, setDrawerContent] = useState<{ image: string; content: string; details: string } | null>(null);
+  const [drawerContent, setDrawerContent] = useState<Link | null>(null);
 
-  const handleLinkClick = (linkContent: { image: string; content: string; details: string }) => {
-    setDrawerContent(linkContent);
+  const handleLinkClick = (link: Link) => {
+    setDrawerContent(link);
     setOpen(true);
   };
 
   return (
-    <div
+    <header
       id="header"
-      className="relative isolate overflow-hidden py-20 sm:py-24 bg-backgroundLight text-textLight dark:bg-backgroundDark dark:text-textDark"
+      className="relative flex flex-col items-center justify-center px-4 py-12 bg-backgroundLight text-textLight dark:bg-backgroundDark dark:text-textDark"
     >
       <Drawers open={open} onCloseAction={() => setOpen(false)} content={drawerContent} />
-      <div className="mx-auto max-w-7xl px-4 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2
-            className="text-5xl font-semibold tracking-tight sm:text-7xl underline decoration-[#D64D0C]"
-            style={{ textUnderlineOffset: '12px' }}
-          >
-            Entrena conmigo
-          </h2>
-          <p className="mt-8 text-lg font-medium sm:text-xl">
-            ¿Estás listo para alcanzar tus metas? 💪 Conoce nuestros planes de entrenamiento diseñados especialmente
-            para ayudarte a lograr tus objetivos de salud y fitness.
-          </p>
-        </div>
-        <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold sm:grid-cols-2 md:flex lg:gap-x-10">
-            {links.map((link) => (
-              <div key={link.name} className="text-left space-y-2">
-                <button
-                  onClick={() => handleLinkClick(link)}
-                  className="text-linkLight hover:underline dark:text-linkDark text-lg"
-                >
-                  {link.name}
-                </button>
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleLinkClick(link);
-                  }}
-                  className="text-linkLight hover:underline dark:text-linkDark text-sm block"
-                >
-                  + info
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat) => (
-            <div key={stat.name} className="flex flex-col items-center gap-2">
-              <dt
-                className="text-xl font-medium text-white dark:text-gray-300 underline decoration-[#D64D0C]"
-                style={{ textUnderlineOffset: '8px' }}
-              >
-                {stat.name}
-              </dt>
-              <dd className="text-4xl font-semibold tracking-tight text-white dark:text-white">
-                {stat.value}
-              </dd>
-            </div>
-          ))}
-        </div>
+
+      <div className="text-center max-w-3xl mb-12">
+        <h2
+          className="text-5xl font-semibold tracking-tight sm:text-6xl underline decoration-[#D64D0C] decoration-4"
+        >
+          Entrena conmigo
+        </h2>
+        <p className="mx-auto mt-8 max-w-1xl text-lg font-medium sm:text-xl">
+          ¿Estás listo para alcanzar tus metas? 💪 Conoce nuestros planes de entrenamiento diseñados especialmente
+          para ayudarte a lograr tus objetivos de salud y fitness.
+        </p>
       </div>
-    </div>
+
+      <section className="grid w-full max-w-6xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-2 mb-12">
+        {links.map((link) => (
+          <div
+            key={link.name}
+            className="relative flex flex-col items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
+          >
+            <img
+              src={link.image}
+              alt={link.name}
+              className="w-32 h-32 rounded-full object-cover mb-4 shadow-md"
+            />
+            <h3 className="text-lg font-semibold mb-2 text-center text-gray-800 dark:text-gray-200">{link.name}</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 text-center">{link.content}</p>
+            <button
+              onClick={() => handleLinkClick(link)}
+              className="px-5 py-2 text-white bg-[#D64D0C] rounded-full hover:bg-[#B0400A] transition-all focus:ring-4 focus:ring-[#D64D0C]/50"
+            >
+              Conoce más
+            </button>
+          </div>
+        ))}
+      </section>
+    </header>
   );
 }
