@@ -45,13 +45,11 @@ export default function Drawers({ open, onCloseAction, content }: DrawersProps) 
           <div className="flex h-full flex-col overflow-y-scroll py-6">
             <div className="px-6 sm:px-8">
               <DialogTitle className="text-2xl font-bold leading-6 text-indigo-600 border-b pb-2">
-                {name}
+              <b>+ Info</b> 
               </DialogTitle>
             </div>
-
             <div className="relative mt-0 flex-1 px-6 sm:px-8">
-              <p className="text-gray-800 text-lg leading-relaxed mt-0 mb-1">{drawerContent}</p>
-
+              <p className="text-gray-800 text-lg leading-relaxed mt-0 mb-1"><b>{name}</b></p>
               {image && (
                 <img
                   src={image}
@@ -59,9 +57,7 @@ export default function Drawers({ open, onCloseAction, content }: DrawersProps) 
                   className="w-full h-auto mb-6 rounded-lg shadow-md border border-gray-200"
                 />
               )}
-
               <p className="text-base text-gray-800 leading-relaxed font-medium mt-2 mb-4">{details}</p>
-
               <div className="flex justify-center mt-8">
                 <a
                   href={`${whatsappBaseURL}?text=${encodeURIComponent(whatsappMessage)}`}
