@@ -49,7 +49,7 @@ export default function Drawers({ open, onCloseAction, content }: DrawersProps) 
               </DialogTitle>
             </div>
             <div className="relative mt-0 flex-1 px-6 sm:px-8">
-              <p className="text-gray-800 text-lg leading-relaxed mt-0 mb-1"><b>{name}</b></p>
+              <p className="text-2xl font-bold leading-1 text-indigo-600"><b>{name}</b></p>
               {image && (
                 <img
                   src={image}
