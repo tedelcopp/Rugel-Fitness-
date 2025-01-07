@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **Rugel Fitness: Plataforma de Bienestar y Entrenamiento Personalizado**
 
-## Getting Started
+**Rugel Fitness** es una aplicación diseñada para personas que buscan mejorar su bienestar físico y mental mediante planes de entrenamiento personalizados y herramientas para monitorear su progreso. La plataforma combina una experiencia intuitiva con funcionalidades modernas para apoyar a los usuarios en su camino hacia una vida más saludable.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## **Características principales**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **🏋️ Planes de entrenamiento personalizados:** Creados según los objetivos y nivel físico de cada usuario.
+- **📈 Seguimiento del progreso:** Registro detallado de métricas como peso, repeticiones y frecuencia de ejercicio.
+- **📅 Calendario de actividades:** Organización de rutinas diarias, semanales y mensuales.
+- **🛠️ Herramientas de monitoreo:** Gráficos y estadísticas para evaluar el rendimiento.
+- **🌗 Modo oscuro/claro:** Interfaz personalizable para una experiencia cómoda en cualquier entorno.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## **Tecnologías utilizadas**
 
-## Learn More
+- **Frontend:** React.js, Tailwind CSS.
+- **Estado global:** Redux para la gestión eficiente del estado de la aplicación.
+- **Notificaciones:** `react-toastify` para alertas y mensajes informativos.
+- **Backend:** Node.js y Express para la lógica del servidor.
+- **Base de datos:** MongoDB para el almacenamiento de datos.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## **Estructura del proyecto**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Componentes reutilizables:** Diseño modular para mantener un código limpio y escalable.
+- **Integración con API:** Comunicación eficiente entre el frontend y el backend.
+- **Configuración personalizada:** Temas adaptables y soporte para diferentes dispositivos.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## **Objetivo del proyecto**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Ayudar a las personas a alcanzar sus metas de salud y fitness mediante una plataforma accesible, intuitiva y basada en datos, adaptada a sus necesidades específicas.
+
+---
+
+## **Instalación y Uso**
+
+1. Clona este repositorio.
+   ```bash
+   git clone https://github.com/tu-usuario/rugel-fitness.git
+   ```
+2. Navega al directorio del proyecto.
+   ```bash
+   cd rugel-fitness
+   ```
+3. Instala las dependencias.
+   ```bash
+   npm install
+   ```
+4. Inicia el servidor de desarrollo.
+   ```bash
+   npm run dev
+   ```
+5. Abre [http://localhost:3000](http://localhost:3000) en tu navegador para explorar la aplicación.
+
+---
+
+## **Contribuciones**
+
+¡Las ideas y mejoras son siempre bienvenidas! Si quieres colaborar:
+
+1. Crea un issue con tu propuesta.
+2. Haz un fork del repositorio.
+3. Envía un pull request detallando tus cambios.
+
+---
+
+## **Contacto**
+
+Si deseas más información o tienes dudas sobre este proyecto, no dudes en contactarme en [LinkedIn](https://www.linkedin.com/in/edelcopp/).
+
+---
+
+## **Licencia**
+
+Este proyecto se encuentra bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
