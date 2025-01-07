@@ -1,6 +1,6 @@
 # **Rugel Fitness: Plataforma de Bienestar y Entrenamiento Personalizado**
 
-**Rugel Fitness** es una aplicación diseñada para personas que buscan mejorar su bienestar físico y mental mediante planes de entrenamiento personalizados y herramientas para monitorear su progreso. La plataforma combina una experiencia intuitiva con funcionalidades modernas para apoyar a los usuarios en su camino hacia una vida más saludable.
+**Rugel Fitness** es una aplicación en desarrollo diseñada para personas que buscan mejorar su bienestar físico y mental mediante planes de entrenamiento personalizados y herramientas para monitorear su progreso. La plataforma combina una experiencia intuitiva con funcionalidades modernas para apoyar a los usuarios en su camino hacia una vida más saludable.
 
 ---
 
